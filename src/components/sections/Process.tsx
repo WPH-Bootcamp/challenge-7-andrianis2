@@ -3,6 +3,12 @@ import { steps } from '../../data/steps';
 const Process = () => {
   return (
     <section className='bg-black py-20'>
+      <div class='max-w-5xl mx-auto text-center'>
+        <h2 class='text-4xl font-bold'>Our Process</h2>
+        <p class='text-gray-400 mt-4 mb-20'>
+          Clear steps. Smart execution. Powerful results.
+        </p>
+      </div>
       <div className='max-w-6xl mx-auto relative'>
         {/* Garis Tengah */}
         <div className='absolute left-1/2 top-0 h-full w-[2px] bg-zinc-800 -translate-x-1/2' />

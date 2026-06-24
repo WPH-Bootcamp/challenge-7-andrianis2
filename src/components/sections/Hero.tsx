@@ -2,7 +2,7 @@ import hero from '../../assets/images/hero.png';
 
 const Hero = () => {
   return (
-    <section className='pt-36 pb-24 px-6'>
+    <section className='pt-36 pb-24 px-6' id='About'>
       <div className='max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center'>
         <div>
           <h1 className='text-5xl lg:text-6xl font-bold leading-tight'>

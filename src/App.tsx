@@ -1,19 +1,30 @@
-import { Navbar } from './components/layout';
-import { Brands, Hero, Process, Services, Stats } from './components/sections';
+import { Navbar, Footer } from './components/layout';
+import {
+  Brands,
+  Build,
+  Faq,
+  Hero,
+  Process,
+  Projects,
+  Services,
+  Stats,
+  Testimonials,
+} from './components/sections';
 
 function App() {
   return (
     <div className='bg-black text-white'>
-      <header className='fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur'>
-        <div className='max-w-7xl mx-auto px-6 py-5'>
-          <Navbar />
-        </div>
-      </header>
+      <Navbar />
       <Hero />
       <Brands />
       <Stats />
       <Process />
       <Services />
+      <Build />
+      <Projects />
+      <Testimonials />
+      <Faq />
+      <Footer />
     </div>
   );
 }
