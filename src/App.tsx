@@ -1,5 +1,5 @@
 import { Navbar } from './components/layout';
-import { Brands, Hero, Stats } from './components/sections';
+import { Brands, Hero, Process, Services, Stats } from './components/sections';
 
 function App() {
   return (
@@ -12,6 +12,8 @@ function App() {
       <Hero />
       <Brands />
       <Stats />
+      <Process />
+      <Services />
     </div>
   );
 }
