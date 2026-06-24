@@ -1,6 +1,14 @@
+import { useState } from 'react';
+import { faqs } from '../../data/faqs';
 import faq from '../../assets/images/consultation.png?q=80&w=1200&auto=format&fit=crop';
 
 const Faq = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section className='py-24 px-6' id='FAQ'>
       <div className='max-w-6xl mx-auto grid lg:grid-cols-2 gap-16'>
@@ -10,43 +18,29 @@ const Faq = () => {
           </h2>
 
           <div className='mt-10 space-y-6'>
-            <div className='border-b border-white/10 pb-4'>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-semibold'>What services do you offer?</h3>
-                <span>+</span>
-              </div>
-            </div>
+            <div className='space-y-4'>
+              {faqs.map((faq, index) => (
+                <div key={index} className='border-b border-zinc-800 pb-5'>
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className='w-full flex justify-between items-center text-left'
+                  >
+                    <h3 className='text-white text-2xl font-semibold'>
+                      {faq.question}
+                    </h3>
 
-            <div className='border-b border-white/10 pb-4'>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-semibold'>
-                  How do I know if this is right for my business?
-                </h3>
-                <span>+</span>
-              </div>
-            </div>
+                    <span className='text-white text-3xl'>
+                      {openIndex === index ? '−' : '+'}
+                    </span>
+                  </button>
 
-            <div className='border-b border-white/10 pb-4'>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-semibold'>How much does a project cost?</h3>
-                <span>+</span>
-              </div>
-            </div>
-
-            <div className='border-b border-white/10 pb-4'>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-semibold'>How long does it take?</h3>
-                <span>+</span>
-              </div>
-            </div>
-
-            <div className='border-b border-white/10 pb-4'>
-              <div className='flex justify-between items-center'>
-                <h3 className='font-semibold'>
-                  Can I start with a small project first?
-                </h3>
-                <span>+</span>
-              </div>
+                  {openIndex === index && (
+                    <p className='text-zinc-400 mt-5 text-lg leading-8'>
+                      {faq.answer}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
