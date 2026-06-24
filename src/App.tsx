@@ -2,6 +2,7 @@ import { Navbar, Footer } from './components/layout';
 import {
   Brands,
   Build,
+  Contact,
   Faq,
   Hero,
   Process,
@@ -24,6 +25,7 @@ function App() {
       <Projects />
       <Testimonials />
       <Faq />
+      <Contact />
       <Footer />
     </div>
   );
