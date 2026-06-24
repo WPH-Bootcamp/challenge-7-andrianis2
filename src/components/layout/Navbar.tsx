@@ -42,29 +42,32 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <Dialog.Root>
-            <Dialog.Trigger className='md:hidden'>☰</Dialog.Trigger>
+            <Dialog.Trigger className='md:hidden right-0 absolute '>
+              ☰
+            </Dialog.Trigger>
             <Dialog.Content>
               <Flex>
-                <div className='flex flex-col gap-4 absolute right-0  bg-white'>
-                  <a href='#' className='hover:text-orange-500'>
+                <div className='flex flex-col gap-6 absolute right-0  bg-black max-w-7xl mx-auto px-6 py-5'>
+                  <a href='#About' className='hover:text-orange-500'>
                     About
                   </a>
-                  <a href='#' className='hover:text-orange-500'>
+                  <a href='#Services' className='hover:text-orange-500'>
                     Service
                   </a>
-                  <a href='#' className='hover:text-orange-500'>
+                  <a href='#Projects' className='hover:text-orange-500'>
                     Projects
                   </a>
-                  <a href='#' className='hover:text-orange-500'>
+                  <a href='#Testimonials' className='hover:text-orange-500'>
                     Testimonials
                   </a>
-                  <a href='#' className='hover:text-orange-500'>
+                  <a href='#FAQ' className='hover:text-orange-500'>
                     FAQ
                   </a>
                 </div>
               </Flex>
             </Dialog.Content>
           </Dialog.Root>
+
           <button class='bg-orange-500 hover:bg-orange-600 transition px-6 py-2 rounded-full text-sm font-semibold'>
             Let's Talk
           </button>
